@@ -217,7 +217,7 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
         path.relative(import.meta.dirname, script_filepath.dir).replace(/^[^\\/]+[\\/]/, ''),
       ),
       chunkFilename: `${script_filepath.name}.[contenthash].chunk.js`,
-      asyncChunks: true,
+      asyncChunks: false,
       clean: true,
       publicPath: '',
       library: {
@@ -484,6 +484,7 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
       ),
     optimization: {
       minimize: true,
+      concatenateModules: false,
       minimizer: [
         argv.mode === 'production'
           ? new TerserPlugin({
