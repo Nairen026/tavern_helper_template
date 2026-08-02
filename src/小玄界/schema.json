@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前时间": {
+          "default": "天历元年·春·三月",
+          "type": "string"
+        },
+        "当前区域": {
+          "default": "主殿",
+          "type": "string"
+        },
+        "天气": {
+          "default": "晴",
+          "type": "string"
+        }
+      }
+    },
+    "宗门": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "阶段": {
+          "default": "开山期",
+          "type": "string",
+          "enum": [
+            "开山期",
+            "发展期",
+            "鼎盛期"
+          ]
+        },
+        "名望": {
+          "default": 0,
+          "type": "number"
+        },
+        "灵石": {
+          "default": 0,
+          "type": "number"
+        },
+        "资源库存": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "资源名"
+          },
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "设施": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "主殿": {
+              "default": 0,
+              "type": "number"
+            },
+            "丹房": {
+              "default": 0,
+              "type": "number"
+            },
+            "演武场": {
+              "default": 0,
+              "type": "number"
+            },
+            "藏经阁": {
+              "default": 0,
+              "type": "number"
+            },
+            "药田": {
+              "default": 0,
+              "type": "number"
+            },
+            "后山": {
+              "default": 0,
+              "type": "number"
+            }
+          }
+        },
+        "弟子": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "弟子名"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "境界": {
+                "default": "练气一层",
+                "type": "string"
+              },
+              "状态": {
+                "default": "在山门",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "待办任务": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "任务名"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "说明": {
+                "default": "",
+                "type": "string"
+              },
+              "目标": {
+                "default": "",
+                "type": "string"
+              },
+              "奖励": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

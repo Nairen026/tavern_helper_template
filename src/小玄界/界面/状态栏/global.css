@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --c-surface: #1b1815;
+  --c-surface-raised: #26221e;
+  --c-text: #d8cfc0;
+  --c-text-muted: #9a8f7d;
+  --c-text-strong: #f0e8d8;
+  --c-border: #4a4036;
+  --c-border-soft: #3a342c;
+  --c-accent: #e8d9a8;
+  --c-accent-strong: #d4b66a;
+  --c-stage-start: #8a7a50;
+  --c-stage-mid: #d4b66a;
+  --c-stage-late: #c2553f;
+  --c-good: #7ba05b;
+  --c-warn: #c2553f;
+
+  --font-xian: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --font-ui: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+}
